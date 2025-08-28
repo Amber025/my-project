@@ -1,7 +1,7 @@
 <div id="hero">
   <p align="center" dir="auto">
       <a>
-        <img src="images/Logo-AdilOps.png" alt="Fleetbase logo" width="300" height="320" style="max-width: 100%;">
+        <img src="images/Logo-AdilOpss.png" alt="Fleetbase logo" width="300" height="320" style="max-width: 100%;">
       </a>
     </p>
     <p align="center" dir="auto">
@@ -144,3 +144,4 @@ AdilOps is looking to offer a few open sourced apps which are built on Fleetbase
 <img src="images/Aadil.png" alt="Ron Image" width="75" height="75" style="max-width: 100%;">          
 <p><a href="https://github.com/Aadil-SA22">Github</a> | <a href="https://www.linkedin.com/feed/">LinkedIn</a></p>
                    
+
