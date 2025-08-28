@@ -1,7 +1,7 @@
 <div id="hero">
   <p align="center" dir="auto">
-      <a href="https://fleetbase.io" rel="nofollow">
-        <img src="https://user-images.githubusercontent.com/58805033/191936702-fed04b0f-7966-4041-96d0-95e27bf98248.png" alt="Fleetbase logo" width="500" height="120" style="max-width: 100%;">
+      <a>
+        <img src="images/Logo-AdilOps.png" alt="Fleetbase logo" width="300" height="320" style="max-width: 100%;">
       </a>
     </p>
     <p align="center" dir="auto">
@@ -11,18 +11,13 @@
       ·
       <a href="https://console.fleetbase.io" rel="nofollow" target="_fleetbase_console">Cloud Version</a>
       ·
-      <a href="https://console.fleetbase.io/aws-marketplace" rel="nofollow" target="_aws_marketplace">Deploy on AWS</a>
-      ·
-      <a href="https://tally.so/r/3NBpAW" rel="nofollow">Book a Demo</a>
-      ·
-      <a href="https://discord.gg/V7RVWRQ2Wm" target="discord" rel="nofollow">Discord</a>
     </p>
     <hr />
 </div>
 
-## What is Fleetbase?
+## What is AdilOps?
 
-Fleetbase is a modular logistics and supply chain operating system designed to streamline management, planning, optimization, and operational control across various sectors of the supply chain industry.
+AdilOps is a Fleetbase of modular logistics and supply chain operating system designed to streamline management, planning, optimization, and operational control across various sectors of the supply chain industry.
 
 <p align="center" dir="auto">
   <img src="https://github.com/fleetbase/fleetbase/assets/816371/125348c9-c88a-49fe-b098-9abec9d7dff8" alt="Fleetbase Console" width="1200" style="max-width: 100%;" />
@@ -31,24 +26,18 @@ Fleetbase is a modular logistics and supply chain operating system designed to s
 **Quickstart**
 
 ```bash
-git clone git@github.com:fleetbase/fleetbase.git  
-cd fleetbase && ./scripts/docker-install.sh
+git clone git@github.com:Amber025/AdilOps.git
+cd AdilOps && ./scripts/docker-install.sh
 ```
 
 ## 📖 Table of contents
 
   - [Features](#-features)
   - [Install](#-install)
-  - [Deploy on AWS](#-deploy-on-aws-in-one-click)
   - [Extensions](#-extensions)
   - [Apps](#-apps)
   - [Roadmap](#-roadmap)
-  - [Bugs and Feature Requests](#-bugs-and--feature-requests)
-  - [Documentation](#-documentation)
-  - [Contributing](#-contributing)
-  - [Community](#-community)
   - [Creators](#-creators)
-  - [License & Copyright](#-license-and-copyright)
 
 ## 📦 Features
 - **Extensible:** Build installable extensions and additional functionality directly into the OS via modular architecture.
@@ -67,20 +56,20 @@ cd fleetbase && ./scripts/docker-install.sh
 - **Open Source:** Deploy it either on-premise or in the cloud according to your organization's needs and preferences.
 
 ## 💾 Install
-Getting up and running with Fleetbase via Docker is the quickest and most straightforward way. If you’d like to use Fleetbase without docker read the [full install guide in the Fleetbase documentation](https://docs.fleetbase.io/getting-started/install).  
+Getting up and running with AdilOps via Docker is the quickest and most straightforward way. 
   
 Make sure you have both the latest versions of docker and docker-compose installed on your system.
 
 ```bash
-git clone git@github.com:fleetbase/fleetbase.git  
-cd fleetbase && ./scripts/docker-install.sh
+git clone git@github.com:Amber025/AdilOps.git
+cd AdilOps && ./scripts/docker-install.sh
 ```
 
-### Accessing Fleetbase
-Once successfully installed and running you can then access the Fleetbase console on port 4200 and the API will be accessible from port 8000.  
+### Accessing AdilOps
+Once successfully installed and running you can then access the AdilOps console on port 4200 and the API will be accessible from port 8000.  
   
-Fleetbase Console: http://localhost:4200
-Fleetbase API: http://localhost:8000
+AdilOps Console: http://localhost:4200
+AdilOps API: http://localhost:8000
 
 ### Additional Configurations
 
@@ -96,9 +85,9 @@ docker compose exec application bash -c "php artisan key:generate --show"
 ```
 Next copy this value to the `APP_KEY` environment variable in the application container and restart.
   
-**Routing:** Fleetbase ships with a default OSRM server hosted by `[router.project-osrm.org](https://router.project-osrm.org)` but you’re able to use your own or any other OSRM compatible server. You can modify this in the `console/environments` directory by modifying the .env file of the environment you’re deploying and setting the `OSRM_HOST` to the OSRM server for Fleetbase to use.  
+**Routing:** AdilOps ships with a default OSRM server hosted by `[router.project-osrm.org](https://router.project-osrm.org)` but you’re able to use your own or any other OSRM compatible server. You can modify this in the `console/environments` directory by modifying the .env file of the environment you’re deploying and setting the `OSRM_HOST` to the OSRM server for Fleetbase to use.  
   
-**Services:** There are a few environment variables which need to be set for Fleetbase to function with full features. If you’re deploying with docker then it’s easiest to just create a `docker-compose.override.yml` and supply the environment variables in this file.
+**Services:** There are a few environment variables which need to be set for AdilOps to function with full features. If you’re deploying with docker then it’s easiest to just create a `docker-compose.override.yml` and supply the environment variables in this file.
 
 ```yaml
 version: “3.8”
@@ -116,105 +105,42 @@ services:
       TWILIO_FROM:
 ```
 
-You can learn more about full installation, and configuration in the [official documentation](https://docs.fleetbase.io/getting-started/install).
-
-## 🚀 Deploy on AWS in One Click
-
-Deploy your complete Fleetbase logistics platform on AWS with enterprise-grade security, scalability, and reliability. No DevOps expertise required!
-
-[![Deploy to AWS](https://img.shields.io/badge/Deploy%20to%20AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://console.fleetbase.io/aws-marketplace)
-
-### ✨ What You Get
-
-- **Complete AWS Infrastructure**: ECS Fargate, RDS MySQL, ElastiCache Redis, S3, CloudFront, and more  
-- **25-Minute Setup**: From zero to production-ready logistics platform  
-- **Enterprise Security**: VPC isolation, encrypted storage, secrets management  
-- **Auto-Scaling**: Handle traffic spikes with ECS Fargate auto-scaling  
-- **High Availability**: Multi-AZ deployment with 99.9% uptime SLA  
-- **Cost Optimized**: Pay-as-you-use with optimized resource allocation  
-
-### 🏗️ Infrastructure Included
-
-Your AWS deployment includes a complete, production-ready infrastructure stack:
-
-- **Compute**: ECS Fargate cluster with auto-scaling services  
-- **Database**: RDS MySQL 8.0 with automated backups and Multi-AZ support  
-- **Cache**: ElastiCache Redis for high-performance caching  
-- **Storage**: S3 object storage with CloudFront CDN for global distribution  
-- **Networking**: VPC with private subnets, NAT gateways, and security groups  
-- **Load Balancing**: Application Load Balancer with SSL certificates  
-- **Monitoring**: CloudWatch logs, container insights, and health monitoring  
-- **Messaging**: SQS message queues for background job processing  
-
-[**🚀 Deploy Now**](https://console.fleetbase.io/aws-marketplace) | [**📖 Learn More**](https://docs.fleetbase.io/category/deploying/aws)
-
 # 🧩 Extensions 
 
-Extensions are modular components that enhance the functionality of your Fleetbase instance. They allow you to add new features, customize existing behavior, or integrate with external systems.
+Extensions are modular components that enhance the functionality of your AdilOps instance. They allow you to add new features, customize existing behavior, or integrate with external systems.
 
-You can find extensions available from the official [Fleetbase Console](https://console.fleetbase.io), here you will also be able get your registry token to install extensions to a self-hosted Fleetbase instance. 
+## ⌨️ AdilOps CLI 
 
-Additionally you're able to develop and publish your own extensions as well which you can read more about developing extensions via the [extension building guide](https://docs.fleetbase.io/developers/building-an-extension).
-
-## ⌨️ Fleetbase CLI 
-
-The Fleetbase CLI is a powerful tool designed to simplify the management of extensions for your Fleetbase instance. With the CLI, you can effortlessly handle authentication, install and uninstall extensions, and scaffold new extensions if you are developing your own.
+The AdilOps CLI is a powerful tool designed to simplify the management of extensions for your AdilOps instance. With the CLI, you can effortlessly handle authentication, install and uninstall extensions, and scaffold new extensions if you are developing your own.
 
 Get started with the CLI with npm:
 
 ```bash
-npm i -g @fleetbase/cli
+npm i -g @adilops/cli
 ```
 
-Once installed, you can access a variety of commands to manage your Fleetbase extensions.
+Once installed, you can access a variety of commands to manage your AdilOps extensions.
 
 # 📱 Apps
 
-Fleetbase offers a few open sourced apps which are built on Fleetbase which can be cloned and customized. Every app is built so that the Fleetbase instance can be switched out whether on-premise install or cloud hosted.
+AdilOps is looking to offer a few open sourced apps which are built on Fleetbase which can be cloned and customized. Every app is built so that the Fleetbase instance can be switched out whether on-premise install or cloud hosted.
 
 <ul>
-  <li><a href="https://github.com/fleetbase/storefront-app">Storefront App</a>: Fleetbase based ecommerce/on-demand app for launching your very own shop or marketplace to Apple or Android playstore.</li>
-  <li><a href="https://github.com/fleetbase/navigator-app">Navigator App</a>: Fleetbase based driver app which can be used for drivers to manage and update order, additionally provides real time driver location which can be viewed in the Fleetbase Console.</li>
+  <li><a href="https://github.com/fleetbase/storefront-app">Storefront App</a>: AdilOps based ecommerce/on-demand app for launching your very own shop or marketplace to Apple or Android playstore.</li>
+  <li><a href="https://github.com/fleetbase/navigator-app">Navigator App</a>: AdilOps based driver app which can be used for drivers to manage and update order, additionally provides real time driver location which can be viewed in the AdilOps Console.</li>
 </ul>
 
 ## 🛣️ Roadmap
-1.  **Inventory and Warehouse Management** ~ Pallet will be Fleetbase’s first official extension for WMS & Inventory.
-2.  **Accounting and Invoicing** ~ Ledger will be Fleetbase’s first official extension accounting and invoicing.
-3.  **Fleetbase for Desktop** ~ Desktop builds for OSX and Windows.
+1.  **Inventory and Warehouse Management** ~ Pallet will be AdilOps' first official extension for WMS & Inventory.
+2.  **Accounting and Invoicing** ~ Ledger will be AdilOps' first official extension accounting and invoicing.
+3.  **AdilOps for Desktop** ~ Desktop builds for OSX and Windows.
 4. **Custom Maps and Routing Engines** ~ Feature to enable easy integrations with custom maps and routing engines like Google Maps or Mapbox etc…
 
-## 🪲 Bugs and 💡 Feature Requests
 
-Have a bug or a feature request? Please check the <a href="https://github.com/fleetbase/fleetbase/issues">issue tracker</a> and search for existing and closed issues. If your problem or idea is not addressed yet, please <a href="https://github.com/fleetbase/fleetbase/issues/new">open a new issue</a>.
-
-## 👨‍💻 Contributing
-
-Please read through our <a href="https://github.com/fleetbase/fleetbase/blob/main/CONTRIBUTING.md">contributing guidelines</a>. Included are directions for opening issues, coding standards, and notes on development.
-
-## 👥 Community
-
-Get updates on Fleetbase's development and chat with the project maintainers and community members by joining our <a href="https://discord.gg/V7RVWRQ2Wm">Discord</a>.
-
-<ul>
-  <li>Follow <a href="https://x.com/fleetbase_io">@fleetbase_io on X</a>.</li>
-  <li>Read and subscribe to <a href="https://www.fleetbase.io/blog-2">The Official Fleetbase Blog</a>.</li>
-  <li>Ask and explore <a href="https://github.com/orgs/fleetbase/discussions">our GitHub Discussions</a>.</li>
-</ul>
-<p dir="auto">See the <a href="https://github.com/fleetbase/fleetbase/releases">Releases</a> section of our GitHub project for changelogs for each release version of Fleetbase.</p>
-<p>Release announcement posts on <a href="https://www.fleetbase.io/blog-2" rel="nofollow">the official Fleetbase blog</a> contain summaries of the most noteworthy changes made in each release.</p>
 
 ## Creators
 
-<p dir="auto"><strong>Ronald A. Richardson</strong>- Co-founder &amp; CTO</p>
-<img src="https://user-images.githubusercontent.com/58805033/230263021-212f2553-1269-473d-be94-313cb3eecfa5.png" alt="Ron Image" width="75" height="75" style="max-width: 100%;">          
-<p><a href="https://github.com/orgs/fleetbase/people/roncodes">Github</a> | <a href="https://www.linkedin.com/in/ronald-a-richardson/">LinkedIn</a></p>
+<p dir="auto"><strong>Aadil Shani Akhtar</strong>- IEM @ RVCE</p>
+<img src="images/Aadil.png" alt="Ron Image" width="75" height="75" style="max-width: 100%;">          
+<p><a href="https://github.com/Aadil-SA22">Github</a> | <a href="https://www.linkedin.com/feed/">LinkedIn</a></p>
                    
-<p dir="auto"><strong>Shiv Thakker</strong> - Co-founder &amp; CEO</p>
-<img src="https://user-images.githubusercontent.com/58805033/230262598-1ce6d0cc-fb65-41f9-8384-5cf5cbf369c7.png" alt="Shiv Image" width="75" height="75" style="max-width: 100%;">  
-<p><a href="https://github.com/orgs/fleetbase/people/shivthakker">Github</a> | <a href="https://www.linkedin.com/in/shivthakker/">LinkedIn</a></p>
-
-
-# License & Copyright
-
-Fleetbase is made available under the terms of the <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU Affero General Public License 3.0 (AGPL 3.0)</a>. For other licenses <a href="mailto:hello@fleetbase.io" target="_blank">contact us</a>.
-
